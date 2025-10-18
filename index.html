@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Teni's Profile Card</title>
+    <link rel="icon" type="image/x-icon" href="./profile-card.jpg" />
+  </head>
+  <body>
+    <main>
+      <article class="profile-card" data-testid="test-profile-card">
+        <figure class="bg-logo"><img src="./HNG-logo.svg" /></figure>
+        <figure>
+          <img data-testid="test-user-avatar" src="./profile-card.jpg" />
+        </figure>
+        <h2 class="name" data-testid="test-user-name">Teniola Kalaro</h2>
+        <p class="role">Frontend Developer</p>
+        <section class="time">
+          <p data-testid="test-user-time" id="current-time">--:--</p>
+          <p id="current-date">Loading date…</p>
+        </section>
+        <p class="bio" data-testid="test-user-bio">
+          A physics junkie who also happens to code and is currently obsessed
+          with space. I'm a big fan of BTS and the indie genre, weird combo I
+          know... Going to work for Meta one day #HireMeMark ⚡
+        </p>
+
+        <div class="know-me">
+          <section data-testid="test-user-hobbies">
+            <h3>Hobbies</h3>
+            <ul>
+              <li>Reading 📖</li>
+              <li>Music 🎧</li>
+              <li>Piano 🎹</li>
+              <li>Crocheting 🧶</li>
+            </ul>
+          </section>
+          <section data-testid="test-user-dislikes">
+            <h3>Dislikes</h3>
+            <ul>
+              <li>Honey 🍯</li>
+              <li>Heat ♨️</li>
+              <li>Slow Walkers 🦕</li>
+            </ul>
+          </section>
+        </div>
+        <ul class="social" data-testid="test-user-social-links">
+          <li>
+            <a
+              class="fa fa-github"
+              data-testid="test-user-social-github"
+              href="https://github.com/pineapplegoose"
+            ></a>
+          </li>
+          <li>
+            <a
+              class="fa fa-linkedin"
+              data-testid="test-user-social-linkedin"
+              href="www.linkedin.com/in/teniola-kalaro-448442238"
+            ></a>
+          </li>
+          <li>
+            <a
+              class="fa fa-twitter-square"
+              data-testid="test-user-social-twitter"
+              href="https://x.com/ktviens"
+            ></a>
+          </li>
+        </ul>
+        <img class="bottom" src="./background-rectangle.png" />
+      </article>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
