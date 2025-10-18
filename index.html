@@ -14,9 +14,13 @@
   <body>
     <main>
       <article class="profile-card" data-testid="test-profile-card">
-        <figure class="bg-logo"><img src="./HNG-logo.svg" /></figure>
+        <figure class="bg-logo"><img src="./HNG-logo.svg" alt="logo" /></figure>
         <figure>
-          <img data-testid="test-user-avatar" src="./profile-card.jpg" />
+          <img
+            data-testid="test-user-avatar"
+            alt="profile-image"
+            src="./profile-card.jpg"
+          />
         </figure>
         <h2 class="name" data-testid="test-user-name">Teniola Kalaro</h2>
         <p class="role">Frontend Developer</p>
@@ -72,7 +76,11 @@
             ></a>
           </li>
         </ul>
-        <img class="bottom" src="./background-rectangle.png" />
+        <img
+          class="bottom"
+          alt="bottom-border"
+          src="./background-rectangle.png"
+        />
       </article>
     </main>
     <script src="./index.js"></script>
