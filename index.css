@@ -13,8 +13,33 @@ body{
     background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#D5C6FF 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #D5C6FF 2px, #e5e5f7 2px) -1px 0;
     background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
 }
-
-.profile-card{
+.buttons{
+    place-self: center;
+}
+.buttons button{
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    color: #26235C;
+    cursor: pointer;
+}
+.buttons a{
+    color: #26235C;
+    text-decoration: none;
+    font-size: medium;
+}
+#back{
+    place-self: start; 
+    margin: 10px 40px;
+    padding: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: #e5e5f7;
+    color: #26235C;
+    cursor: pointer;
+    position: absolute;
+}
+.profile-card, .about-card, .contact-card{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,8 +49,84 @@ body{
     padding: 20px;
     margin: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    
 }
+
+.about-card{
+    width: 50%;
+    background:#26235C;
+    padding: 10px 0px;
+}
+
+.about-card section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 15px 0;
+    color: white;
+}
+
+.about-card section p{
+    text-align: center;
+    margin: 0px 0;
+}
+
+.about-card section h3{
+    text-align: center;
+    margin: 5px 0;
+    color: #e5e5f7;
+}
+
+.about-card section ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-card{
+    width: 70%;
+
+}
+
+.contact-card form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-card input[type="text"], .contact-card input[type="email"], .contact-card textarea{
+    margin: 10px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #e5e5f7;
+    color: #26235C;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contact-card label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #26235C;
+    width: 70%;
+}
+
+.contact-card label p{
+    width: 100px;
+}
+
+.contact-card input[type="submit"]{
+    background-color: #26235C;
+    padding: 15px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    font-size: medium;
+}
+
 
 figure{
     margin: 50px 0px 0px 0px;
@@ -99,7 +200,7 @@ ul{
     margin: 0px 40px;
 }
 
-.know-me ul{
+.know-me ul,.about-card section ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,11 +250,58 @@ ul{
     left: 0;
     width: 100%;
 }
+.errortext {
+            color: #e74c3c;
+            font-size: 13px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .errortext.show {
+            display: block;
+        }
+
+        input.error,
+        textarea.error {
+            border-color: #e74c3c;
+        }
+
+        input.success,
+        textarea.success {
+            border-color: #27ae60;
+        }
+input[type="submit"]:hover {
+            background: #5568d3;
+        }
+
+        input[type="submit"]:active {
+            transform: scale(0.98);
+        }
+
+        input[type="submit"]:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .success-message {
+            background: #27ae60;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+            margin-top: 20px;
+        }
+
+        .success-message.show {
+            display: block;
+        }
 
 @media only screen and (max-width: 600px) {
     body{
         height: 100%;
         padding: 10px;
+        align-items: flex-start;
     }
     figure{
         margin: 20px 0px 0px 0px;
@@ -166,14 +314,25 @@ ul{
         width: 30px;
         height: 25px;
     }
+    
     .profile-card{
+        padding: 2px;
         width: 80%;
         height: 90%;
+        margin-bottom: 20px;
+    }
+    .contact-card,.about-card{
+        width: 100%;
+        margin-bottom: 20px;
     }
     .bio{
         width: 90%;
     }
-    .know-me h3{
+    .about-card section{
+        width: 70%;
+        margin: 10px 10px;
+    }
+    .know-me h3.about-card section h3{
         font-size: 18px;
         margin: 5px 0;
     }
@@ -187,5 +346,36 @@ ul{
         right: 0;
         left: 0;
         width: 100%;
+    }
+    .contact-card form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contact-card label{
+        font-size: 14px;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 90%;
+    }
+    .contact-card label p{
+        margin: 0 0 5px 0;
+       }
+    .contact-card input[type="text"], .contact-card input[type="email"], .contact-card textarea {
+        width: 90%;
+        margin: 10px 0px;
+    }
+    .contact-card h2{
+        margin-top: 40px;
+    }
+    #back{
+        margin:10px 10px;
+    }
+    .about-card section p, .about-card section li{
+        font-size: 14px;
     }
 }

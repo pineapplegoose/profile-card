@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Teni's Profile Card</title>
+    <link rel="icon" type="image/x-icon" href="./profile-card.jpg" />
+  </head>
+  <body>
+    <main class="contact-card" data-testid="test-contact-page">
+      <a
+        style="text-decoration: none; place-self: flex-start"
+        href="./index.html"
+        ><button id="back">&#x2B05;</button></a
+      >
+      <h2>Contact us</h2>
+      <form id="contactForm">
+        <label for="fname">
+          <p>Full Name</p>
+          <input
+            data-testid="test-contact-name"
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="Your name.."
+          />
+        </label>
+        <p
+          data-testid="test-contact-error-name"
+          class="errortext"
+          id="fname-error"
+        >
+          Please enter your full name
+        </p>
+
+        <label for="email">
+          <p>Email</p>
+          <input
+            data-testid="test-contact-email"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email.."
+          />
+        </label>
+        <p
+          data-testid="test-contact-error-email"
+          class="errortext"
+          id="email-error"
+        >
+          Please enter a valid email address
+        </p>
+
+        <label for="subject">
+          <p>Subject</p>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Enter subject.."
+          />
+        </label>
+        <p
+          data-testid="test-contact-error-subject"
+          class="errortext"
+          id="subject-error"
+        >
+          Please enter a subject
+        </p>
+
+        <label for="message">
+          <p>Message</p>
+          <textarea
+            data-testid="test-contact-message"
+            id="message"
+            name="Message"
+            placeholder="Write something.."
+            style="height: 200px"
+          ></textarea>
+        </label>
+        <p
+          data-testid="test-contact-error-message"
+          class="errortext"
+          id="message-error"
+        >
+          Please enter your message
+        </p>
+
+        <input data-testid="test-contact-submit" type="submit" value="Submit" />
+      </form>
+
+      <div
+        data-testid="test-contact-success"
+        class="success-message"
+        id="successMessage"
+      >
+        <i
+          class="fa fa-check-circle"
+          style="font-size: 20px; margin-right: 10px"
+        ></i>
+        Your message has been sent successfully!
+      </div>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

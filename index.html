@@ -12,7 +12,24 @@
     <link rel="icon" type="image/x-icon" href="./profile-card.jpg" />
   </head>
   <body>
-    <main>
+    <main
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      "
+    >
+      <section class="buttons">
+        <button style="background-color: #26235c; color: white">
+          <a href="./about.html" style="color: white">About Me</a>
+        </button>
+        <button style="background-color: white">
+          <a href="./contact.html">Contact Me</a>
+        </button>
+      </section>
       <article class="profile-card" data-testid="test-profile-card">
         <figure class="bg-logo"><img src="./HNG-logo.svg" alt="logo" /></figure>
         <figure>
